@@ -3,7 +3,7 @@ import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
 import { useTransition, animated } from "react-spring";
 import useLocalStorage from "./hooks/useLocalStorage";
 import MainPage from "./components/pages/MainPage";
-import DatePickerPage from "./components/pages/datepickerPage";
+import DatePickerPage from "./components/pages/DatePickerPage";
 
 function App() {
     const { selectedDate } = useLocalStorage("selectedDate", null);
