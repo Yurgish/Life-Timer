@@ -43,7 +43,7 @@ export default function useLocalStorage(key, initValue) {
         };
         window.addEventListener("storage", listenStorageChange);
         return () => window.removeEventListener("storage", listenStorageChange);
-    }, []);
+    }, [initValue, key]);
 
     return [state, setState];
 }

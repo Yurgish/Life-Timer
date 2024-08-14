@@ -37,7 +37,10 @@ const QuotesSection = () => {
     }, [currentQuote]);
 
     return (
-        <section className="flex justify-center items-center text-primary-text-color h-screen snap-center gap-4 text-4xl relative max-sm:text-lg max-lg:text-3xl">
+        <section
+            id="timer-section"
+            className="flex justify-center items-center text-primary-text-color h-screen snap-center gap-4 text-4xl relative max-sm:text-lg max-lg:text-3xl"
+        >
             <animated.div style={fade}>
                 <TypingText
                     key={key}

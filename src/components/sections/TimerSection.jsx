@@ -3,11 +3,12 @@ import AgeTimer from "../AgeTimer";
 import ThemeButton from "../ThemeButton";
 import DeleteDateButton from "../DeleteDatePicker";
 import useMediaQuery from "../../hooks/useMediaQuery";
+import ScrollDown from "../ScrollDown";
 
 const TimerSection = () => {
     const isSmallScreen = useMediaQuery("(max-width: 640px)");
     return (
-        <section className="flex justify-center items-center text-primary-text-color h-screen snap-center gap-4 max-sm:flex-col">
+        <section className="flex justify-center items-center text-primary-text-color h-screen snap-center gap-4 max-sm:flex-col relative">
             <div className="flex gap-4 max-sm:flex-col">
                 <CurrentDateTimer />
                 <AgeTimer />
@@ -16,6 +17,7 @@ const TimerSection = () => {
                 <ThemeButton position={isSmallScreen ? "horizontal" : "vertical"} />
                 <DeleteDateButton />
             </div>
+            <ScrollDown />
         </section>
     );
 };

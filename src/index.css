@@ -3,47 +3,51 @@
 @tailwind utilities;
 
 @layer utilities {
-  /* Hide scrollbar for Chrome, Safari and Opera */
-  .no-scrollbar::-webkit-scrollbar {
-    display: none;
-  }
-  /* Hide scrollbar for IE, Edge and Firefox */
-  .no-scrollbar {
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
-  }
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .no-scrollbar {
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+    }
 }
 
 /*themes*/
 
 [data-theme="dark"] {
-  --bg-color: #181818;
-  --interface-color: #28282a;
-  --interface-hover-color: #313133;
-  --text-color: #dededf;
-  --text-second-color: #58585a;
+    --bg-color: #181818;
+    --interface-color: #28282a;
+    --interface-hover-color: #313133;
+    --text-color: #dededf;
+    --text-second-color: #58585a;
 }
 
 :root {
-  --bg-color: #f3f3f4;
-  --interface-color: #ffffff;
-  --interface-hover-color: #ebebeb;
-  --text-color: #181818;
-  --text-second-color: #bababa;
-  --calendar-red: #e94848;
+    --bg-color: #f3f3f4;
+    --interface-color: #ffffff;
+    --interface-hover-color: #ebebeb;
+    --text-color: #181818;
+    --text-second-color: #bababa;
+    --calendar-red: #e94848;
 }
 
 /* ================================ */
+
+html {
+    scroll-behavior: smooth;
+}
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
-  transition: background-color 0.1s ease-out; /* плавна зміна кольорів*/
+    box-sizing: border-box;
+    transition: background-color 0.1s ease-out; /* плавна зміна кольорів*/
 }
 
 ul[class],
 ol[class] {
-  padding: 0;
+    padding: 0;
 }
 
 body,
@@ -60,77 +64,77 @@ figcaption,
 blockquote,
 dl,
 dd {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-  min-height: 100vh;
-  scroll-behavior: smooth;
-  text-rendering: optimizeSpeed;
-  line-height: 1.5;
-  box-sizing: border-box;
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    box-sizing: border-box;
 }
 
 ul[class],
 ol[class] {
-  list-style: none;
+    list-style: none;
 }
 
 a:not([class]) {
-  text-decoration-skip-ink: auto;
+    text-decoration-skip-ink: auto;
 }
 
 img {
-  max-width: 100%;
-  display: block;
+    max-width: 100%;
+    display: block;
 }
 
 article > * + * {
-  margin-top: 1em;
+    margin-top: 1em;
 }
 
 input,
 button,
 textarea,
 select {
-  font: inherit;
+    font: inherit;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  * {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
 }
 
 /* Ці стилі для правильної стилізації dropdown select (не розібрався, як модернізувати стилі) */
 
 [data-overlayscrollbars~="host"].absolute,
 [data-overlayscrollbars~="viewport"].absolute {
-  position: absolute !important;
+    position: absolute !important;
 }
 
 .os-theme-dark {
-  --os-size: 8px !important;
+    --os-size: 8px !important;
 }
 
 .grid-item {
-  @apply text-center py-1 cursor-pointer;
+    @apply text-center py-1 cursor-pointer;
 }
 
 .grid-item div {
-  @apply flex justify-center items-center rounded-md w-7 h-7;
+    @apply flex justify-center items-center rounded-md w-7 h-7;
 }
 
 .grid-item:hover div {
-  @apply bg-interface-hover;
+    @apply bg-interface-hover;
 }
 
 .shadow-box {
-  -webkit-box-shadow: 0 1.5px 5px 1px rgba(0, 0, 0, 0.03);
-  -moz-box-shadow: 0 1.5px 5px 1px rgba(0, 0, 0, 0.03);
-  box-shadow: 0 1.5px 5px 1px rgba(0, 0, 0, 0.03);
+    -webkit-box-shadow: 0 1.5px 5px 1px rgba(0, 0, 0, 0.03);
+    -moz-box-shadow: 0 1.5px 5px 1px rgba(0, 0, 0, 0.03);
+    box-shadow: 0 1.5px 5px 1px rgba(0, 0, 0, 0.03);
 }
