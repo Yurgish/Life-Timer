@@ -11,8 +11,10 @@ function App() {
     const navigate = useNavigate();
 
     useEffect(() => {
-        if (selectedDate && location.pathname !== "/Timer") navigate("/Timer");
-    }, [navigate, selectedDate, location.pathname]);
+        if (selectedDate) {
+            navigate("/Timer", { replace: true }); // Use replace to avoid adding a new entry in the history stack
+        }
+    }, [selectedDate, navigate]);
 
     const transitions = useTransition(location, {
         from: { opacity: 0, transform: `translateY(40%) scaleY(0.9)` },
