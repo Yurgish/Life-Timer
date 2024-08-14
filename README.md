@@ -15,4 +15,5 @@ The project was inspired by [this website](https://currentage.netlify.app), whic
 
 #### Link to the demo website -> *[Click!](yurgish.github.io/Life-Timer/)* ####
 
+![Life-Timer](https://github.com/user-attachments/assets/fb961de9-7124-4d92-a21e-72f8e4e7d66b)
 
