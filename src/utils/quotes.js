@@ -281,4 +281,100 @@ export const quotes = [
             },
         ],
     },
+    {
+        id: 26,
+        quote: [
+            {
+                text: "You can't be lazy now.",
+            },
+        ],
+    },
+    {
+        id: 27,
+        quote: [
+            {
+                text: "Fear ",
+                className: "text-red-300",
+            },
+            {
+                text: "does not prevent ",
+            },
+            {
+                text: "death",
+                className: "text-[#3b3b3b]",
+            },
+            {
+                text: ", it prevents ",
+            },
+            {
+                text: "life",
+                className: "text-green-300",
+            },
+            {
+                text: ".",
+            },
+        ],
+    },
+    {
+        id: 28,
+        quote: [
+            {
+                text: "In the end, it's not the years in your life that count. It's the life in your years.",
+            },
+        ],
+    },
+    {
+        id: 29,
+        quote: [
+            {
+                text: "I hope this email ",
+            },
+            {
+                text: "finds you well ",
+                className: "line-through",
+            },
+            {
+                text: "never finds you. ",
+                className: "text-[#3b3b3b]",
+            },
+            {
+                text: "I hope you find yourself instead.",
+            },
+            {
+                text: "I hope you are free.",
+            },
+        ],
+    },
+    {
+        id: 30,
+        quote: [
+            {
+                text: "The best time to plant a treeis 20 years ago, the second best time is now.",
+            },
+        ],
+    },
+    {
+        id: 31,
+        quote: [
+            {
+                text: "Life can only be understood backwards, but it must be lived forward.",
+            },
+        ],
+    },
+    {
+        id: 32,
+        quote: [
+            {
+                text: "The choices you make today will be felt by who you have yet to become.",
+            },
+        ],
+    },
+    {
+        id: 33,
+        quote: [
+            {
+                text: "The most beautiful sunrises happen after the darkest of nights.",
+            },
+        ],
+    },
 ];

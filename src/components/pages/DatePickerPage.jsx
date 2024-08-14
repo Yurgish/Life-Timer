@@ -29,7 +29,7 @@ const DatePickerPage = () => {
         <div className="flex justify-center items-center h-screen origin-bottom gap-2">
             <div className="relative">
                 <p className="text-primary-text-color text-lg mb-1 max-[864px]:text-center">When were you born?</p>
-                <div className="flex justify-center items-end ">
+                <div className="flex justify-center items-end">
                     <DatePicker selectedOption={day} setSelectedOption={setState} />
                     <button
                         className="px-4 py-2 bg-interface ml-2 rounded-md text-primary-text-color hover:bg-interface-hover shadow-box"
