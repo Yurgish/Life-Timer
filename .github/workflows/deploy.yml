@@ -7,6 +7,7 @@ on:
     pull_request:
         branches:
             - main
+
 jobs:
     build:
         name: Build
@@ -19,7 +20,7 @@ jobs:
             - name: Setup Node
               uses: actions/setup-node@v3
               with:
-                  node-version: 20
+                  node-version: '20' 
 
             - name: Install dependencies
               run: npm install
@@ -31,7 +32,7 @@ jobs:
               run: npm run build
 
             - name: Upload production-ready build files
-              uses: actions/upload-artifact@v4
+              uses: actions/upload-artifact@v3
               with:
                   name: production-files
                   path: ./dist
@@ -44,7 +45,7 @@ jobs:
 
         steps:
             - name: Download artifact
-              uses: actions/download-artifact@v2
+              uses: actions/download-artifact@v3
               with:
                   name: production-files
                   path: ./dist
