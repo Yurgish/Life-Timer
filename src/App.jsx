@@ -12,7 +12,7 @@ function App() {
 
     useEffect(() => {
         if (selectedDate && location.pathname !== "/Timer") navigate("/Timer");
-    }, [navigate, selectedDate]);
+    }, [navigate, selectedDate, location.pathname]);
 
     const transitions = useTransition(location, {
         from: { opacity: 0, transform: `translateY(40%) scaleY(0.9)` },

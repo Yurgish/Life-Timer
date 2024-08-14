@@ -1,26 +1,28 @@
 import { OverlayScrollbars } from "overlayscrollbars";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 const config = {
-  scrollbars: {
-    theme: "os-theme-dark",
-  },
+    scrollbars: {
+        theme: "os-theme-dark",
+    },
 };
 
 const useScrollbar = (root, hasScroll) => {
-  let scrollbar;
-  useEffect(() => {
-    if (root.current && hasScroll) {
-      scrollbar = OverlayScrollbars(root.current, config);
-    }
-    return () => {
-      if (scrollbar) {
-        scrollbar.destroy();
-      }
-    };
-  }, [root, hasScroll]);
+    const scrollbarRef = useRef(null);
 
-  return scrollbar;
+    useEffect(() => {
+        if (root.current && hasScroll) {
+            scrollbarRef.current = OverlayScrollbars(root.current, config);
+        }
+
+        return () => {
+            if (scrollbarRef.current) {
+                scrollbarRef.current.destroy();
+            }
+        };
+    }, [root, hasScroll]);
+
+    return scrollbarRef.current;
 };
 
 export default useScrollbar;

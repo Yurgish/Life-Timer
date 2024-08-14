@@ -41,4 +41,5 @@ const HoverDateProvider = ({ children }) => {
     );
 };
 
+// eslint-disable-next-line react-refresh/only-export-components
 export { HoverDateProvider, useHoverDateContext };

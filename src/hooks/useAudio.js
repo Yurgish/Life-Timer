@@ -1,19 +1,20 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 
 const useAudio = (url) => {
     const [audio, setNewAudio] = useState(new Audio(url));
     const [playing, setPlaying] = useState(false);
 
-    const toggle = () => setPlaying(!playing);
+    const toggle = useCallback(() => {
+        setPlaying((prev) => !prev);
+    }, []);
 
-    const setAudio = (url) => {
-        setNewAudio(new Audio(url))
-    }
+    const setAudio = useCallback((newUrl) => {
+        setNewAudio(new Audio(newUrl));
+    }, []);
 
-    const getDuration = () => {
-        return Math.floor(audio.duration)
-
-    }
+    const getDuration = useCallback(() => {
+        return Math.floor(audio.duration);
+    }, [audio.duration]);
 
     useEffect(() => {
         const playAudio = async () => {
@@ -36,9 +37,9 @@ const useAudio = (url) => {
     }, [audio]);
 
     useEffect(() => {
-        audio.addEventListener('ended', () => setPlaying(false));
+        audio.addEventListener("ended", () => setPlaying(false));
         return () => {
-            audio.removeEventListener('ended', () => setPlaying(false));
+            audio.removeEventListener("ended", () => setPlaying(false));
         };
     }, [audio]);
 

@@ -1,4 +1,4 @@
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState, useEffect, useCallback } from "react";
 import Select from "../Select";
 import DayItem from "./DateItem";
 import DatePickerInput from "./DatePickerInput";
@@ -51,18 +51,18 @@ function DatePicker({ selectedOption, setSelectedOption }) {
         goToToday();
     };
 
-    const handleClickOutside = (event) => {
+    const handleClickOutside = useCallback((event) => {
         if (datePickerRef.current && !datePickerRef.current.contains(event.target)) {
             handleCloseDatePicker();
         }
-    };
+    }, []);
 
     useEffect(() => {
         document.addEventListener("click", handleClickOutside);
         return () => {
             document.removeEventListener("click", handleClickOutside);
         };
-    }, []);
+    }, [handleClickOutside]);
 
     const transitions = useTransition(isOpen, {
         from: { opacity: 0, transform: "scale(1, 0.9) translateY(-50%)" },
@@ -81,7 +81,7 @@ function DatePicker({ selectedOption, setSelectedOption }) {
                         item && (
                             <animated.div
                                 style={{ ...props }}
-                                className="w-72 px-3 py-3 bg-interface rounded-md text-sm absolute mr-2 right-full top-1/2 origin-bottom text-primary-text-color shadow-box"
+                                className={`w-72 px-3 py-3 bg-interface rounded-md text-sm absolute max-[864px]:-left-[22%] max-[864px]:mr-0  right-full mr-2 top-1/2 origin-bottom text-primary-text-color shadow-box z-20`}
                             >
                                 <div className="flex justify-between items-center mb-2 ">
                                     <IoIosArrowBack className="m-2 cursor-pointer" onClick={() => prevMonth()} />
