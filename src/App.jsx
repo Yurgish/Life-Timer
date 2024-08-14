@@ -1,20 +1,10 @@
-import { useEffect } from "react";
-import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import { useTransition, animated } from "react-spring";
-import useLocalStorage from "./hooks/useLocalStorage";
 import MainPage from "./components/pages/MainPage";
 import DatePickerPage from "./components/pages/DatePickerPage";
 
 function App() {
-    const { selectedDate } = useLocalStorage("selectedDate", null);
     const location = useLocation();
-    const navigate = useNavigate();
-
-    useEffect(() => {
-        if (selectedDate) {
-            navigate("/Timer", { replace: true }); // Use replace to avoid adding a new entry in the history stack
-        }
-    }, [selectedDate, navigate]);
 
     const transitions = useTransition(location, {
         from: { opacity: 0, transform: `translateY(40%) scaleY(0.9)` },

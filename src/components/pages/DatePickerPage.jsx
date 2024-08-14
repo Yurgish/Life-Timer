@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import DatePicker from "../DatePicker/DatePicker";
 import useLocalStorage from "../../hooks/useLocalStorage";
 import ThemeButton from "../ThemeButton";
@@ -7,7 +7,7 @@ import useMediaQuery from "../../hooks/useMediaQuery";
 
 const DatePickerPage = () => {
     const [day, setState] = useState(null);
-    const [, setSelectedDate] = useLocalStorage("selectedDate", day);
+    const [selectedDate, setSelectedDate] = useLocalStorage("selectedDate", day);
     const navigate = useNavigate();
 
     const isSmallScreen = useMediaQuery("(max-width: 864px)");
@@ -18,6 +18,12 @@ const DatePickerPage = () => {
             setTimeout(() => navigate("/Timer"), 1);
         }
     };
+
+    useEffect(() => {
+        if (selectedDate) {
+            navigate("/Timer", { replace: true }); // Use replace to avoid adding a new entry in the history stack
+        }
+    }, [selectedDate, navigate]);
 
     return (
         <div className="flex justify-center items-center h-screen origin-bottom gap-2">
