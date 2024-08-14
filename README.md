@@ -1,8 +1,18 @@
-# React + Vite
+# Life Timer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Life Timer is an interactive web application designed to visually represent the passage of time. Users input their birthdate, and the app begins a countdown, displaying their age in real-time. This visual timer serves as a reminder of life's finite nature and encourages users to reflect on how they spend their time.
 
-Currently, two official plugins are available:
+The project was inspired by [this website](https://currentage.netlify.app), which offers a similar concept of tracking and visualizing time elapsed since a person's birth.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Technologies Used
+
+- **overlayscrollbars**: Customizes scrollbar appearance for a modern UI.
+- **React**: JavaScript library for building dynamic UIs.
+- **react-icons**: Adds various icons to the UI easily.
+- **react-router-dom**: Manages routing for single-page React apps.
+- **react-spring**: Creates smooth animations and transitions in the UI.
+
+
+#### Link to the demo website -> *[Click!](yurgish.github.io/Life-Timer/)* ####
+
+
