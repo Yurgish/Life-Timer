@@ -1,4 +1,4 @@
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState, useEffect, useCallback } from "react";
 import Select from "../Select";
 import DayItem from "./DateItem";
 import DatePickerInput from "./DatePickerInput";
@@ -51,18 +51,18 @@ function DatePicker({ selectedOption, setSelectedOption }) {
         goToToday();
     };
 
-    const handleClickOutside = (event) => {
+    const handleClickOutside = useCallback((event) => {
         if (datePickerRef.current && !datePickerRef.current.contains(event.target)) {
             handleCloseDatePicker();
         }
-    };
+    }, []);
 
     useEffect(() => {
         document.addEventListener("click", handleClickOutside);
         return () => {
             document.removeEventListener("click", handleClickOutside);
         };
-    }, []);
+    }, [handleClickOutside]);
 
     const transitions = useTransition(isOpen, {
         from: { opacity: 0, transform: "scale(1, 0.9) translateY(-50%)" },

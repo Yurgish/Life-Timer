@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import useTheme from "../hooks/useTheme";
 import { PiMoonStarsLight, PiSunLight } from "react-icons/pi";
 import { useSpring, animated } from "react-spring";

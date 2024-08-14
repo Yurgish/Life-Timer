@@ -9,7 +9,7 @@ function NextBirthYearBar() {
     useEffect(() => {
         const calculateDaysSinceLastBirthday = (birthday) => {
             const now = new Date();
-            let lastBirthday = new Date(now.getFullYear(), birthday.getMonth(), birthday.getDate());
+            const lastBirthday = new Date(now.getFullYear(), birthday.getMonth(), birthday.getDate());
 
             if (now < lastBirthday) {
                 lastBirthday.setFullYear(now.getFullYear() - 1);

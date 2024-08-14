@@ -1,5 +1,5 @@
 import { useTrail, animated, useInView, useSpring, useSpringRef } from "react-spring";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useQuotes } from "../../hooks";
 import RefreshQuoteButton from "../RefreshQuoteButton";
 import useAudio from "../../hooks/useAudio";
@@ -8,7 +8,7 @@ const QuotesSection = () => {
     const [currentQuote, changeQuote, getText] = useQuotes();
     const [animateState, setAnimateState] = useState(true);
     const [key, setKey] = useState(0);
-    const [playing, toggle, setAudio, getDuration] = useAudio("");
+    const [, toggle, setAudio, getDuration] = useAudio("");
 
     const handleQuoteChange = () => {
         setAnimateState(false);
@@ -34,7 +34,7 @@ const QuotesSection = () => {
         } else {
             setAudio("");
         }
-    }, [currentQuote]);
+    }, [currentQuote, setAudio, toggle]);
 
     return (
         <section

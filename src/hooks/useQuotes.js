@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { quotes } from "../utils/quotes";
 
 const useQuotes = () => {
@@ -19,13 +19,13 @@ const useQuotes = () => {
         setCurrentQuote(quotes[newIndex]);
     };
 
+    const getText = useCallback(() => {
+        return currentQuote.quote.flatMap((part) => part);
+    }, [currentQuote.quote]);
+
     useEffect(() => {
         console.log(getText());
-    }, [currentQuote, quoteIndex]);
-
-    const getText = () => {
-        return currentQuote.quote.flatMap((part) => part);
-    };
+    }, [currentQuote, getText, quoteIndex]);
 
     return [currentQuote, changeQuote, getText];
 };

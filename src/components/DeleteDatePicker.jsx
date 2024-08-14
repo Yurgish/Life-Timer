@@ -5,7 +5,7 @@ import { useSpring, animated } from "react-spring";
 import { useNavigate } from "react-router-dom";
 
 const DeleteDateButton = () => {
-    const [_, setSelectedDate] = useLocalStorage("selectedDate", null);
+    const [, setSelectedDate] = useLocalStorage("selectedDate", null);
     const [isHovered, setIsHovered] = useState(false);
 
     const navigate = useNavigate();

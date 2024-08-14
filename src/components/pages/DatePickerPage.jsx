@@ -1,4 +1,3 @@
-import React from "react";
 import { useState } from "react";
 import DatePicker from "../DatePicker/DatePicker";
 import useLocalStorage from "../../hooks/useLocalStorage";
@@ -8,7 +7,7 @@ import useMediaQuery from "../../hooks/useMediaQuery";
 
 const DatePickerPage = () => {
     const [day, setState] = useState(null);
-    const [selectedDate, setSelectedDate] = useLocalStorage("selectedDate", day);
+    const [, setSelectedDate] = useLocalStorage("selectedDate", day);
     const navigate = useNavigate();
 
     const isSmallScreen = useMediaQuery("(max-width: 864px)");

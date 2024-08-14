@@ -1,4 +1,3 @@
-import React from "react";
 import { animated, useInView, useSpring } from "react-spring";
 import { MdOutlineRefresh } from "react-icons/md";
 import useMediaQuery from "../hooks/useMediaQuery";
