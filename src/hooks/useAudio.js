@@ -7,13 +7,12 @@ const useAudio = (url) => {
     const toggle = () => setPlaying(!playing);
 
     const setAudio = (url) => {
-        setNewAudio(new Audio(url))
-    }
+        setNewAudio(new Audio(url));
+    };
 
     const getDuration = () => {
-        return Math.floor(audio.duration)
-
-    }
+        return Math.floor(audio.duration);
+    };
 
     useEffect(() => {
         const playAudio = async () => {
@@ -36,9 +35,9 @@ const useAudio = (url) => {
     }, [audio]);
 
     useEffect(() => {
-        audio.addEventListener('ended', () => setPlaying(false));
+        audio.addEventListener("ended", () => setPlaying(false));
         return () => {
-            audio.removeEventListener('ended', () => setPlaying(false));
+            audio.removeEventListener("ended", () => setPlaying(false));
         };
     }, [audio]);
 

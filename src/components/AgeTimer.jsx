@@ -17,14 +17,14 @@ const AgeTimer = () => {
         const intervalId = setInterval(updateTimeToBirth, 260);
 
         return () => clearInterval(intervalId);
-    }, []);
+    }, [selectedDate]);
 
     return (
         <div>
             <p className="text-lg">Age</p>
             <div className="flex align-top">
-                <p className="text-8xl leading-none">{Math.floor(currentDate / millisecondsPerYear)}</p>
-                <p className="text-5xl pt-1">
+                <p className="text-8xl leading-none max-sm:text-8xl">{Math.floor(currentDate / millisecondsPerYear)}</p>
+                <p className="text-5xl pt-2 max-sm:text-[42px]">
                     {((currentDate % millisecondsPerYear) / millisecondsPerYear).toFixed(8).substring(1)}
                 </p>
             </div>
