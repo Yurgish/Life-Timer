@@ -8,7 +8,7 @@ import "overlayscrollbars/overlayscrollbars.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
     <React.StrictMode>
-        <HashRouter basename="/Life-Timer">
+        <HashRouter>
             <App />
         </HashRouter>
     </React.StrictMode>
