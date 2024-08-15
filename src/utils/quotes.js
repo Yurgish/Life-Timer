@@ -330,18 +330,15 @@ export const quotes = [
                 text: "I hope this email ",
             },
             {
-                text: "finds you well ",
+                text: "finds you well",
                 className: "line-through",
             },
             {
-                text: "never finds you. ",
-                className: "text-[#3b3b3b]",
+                text: " never finds you. ",
+                className: "text-[#4d4d4d]",
             },
             {
-                text: "I hope you find yourself instead.",
-            },
-            {
-                text: "I hope you are free.",
+                text: "I hope you find yourself instead. I hope you are free.",
             },
         ],
     },
@@ -374,6 +371,112 @@ export const quotes = [
         quote: [
             {
                 text: "The most beautiful sunrises happen after the darkest of nights.",
+            },
+        ],
+    },
+    {
+        id: 34,
+        quote: [
+            {
+                text: "Working out ",
+                className: "italic",
+            },
+            {
+                text: "will make you feel weak when it’s actually making you ",
+            },
+            {
+                text: "stronger",
+                className: "font-bold",
+            },
+            {
+                text: ".",
+            },
+        ],
+    },
+    {
+        id: 35,
+        quote: [
+            {
+                text: "Investing ",
+                className: "italic",
+            },
+            {
+                text: "in yourself will make you feel broke when it’s actually making you ",
+            },
+            {
+                text: "rich",
+                className: "font-bold",
+            },
+            {
+                text: ".",
+            },
+        ],
+    },
+    {
+        id: 36,
+        quote: [
+            {
+                text: "Learning ",
+                className: "italic",
+            },
+            {
+                text: "new things will make you feel dumb when it’s actually making you ",
+            },
+            {
+                text: "smarter",
+                className: "font-bold",
+            },
+            {
+                text: ".",
+            },
+        ],
+    },
+    {
+        id: 37,
+        quote: [
+            {
+                text: "Facing your fears ",
+                className: "italic",
+            },
+            {
+                text: "will make you feel terrified, when it's actually making you ",
+            },
+            {
+                text: "braver",
+                className: "font-bold",
+            },
+            {
+                text: ".",
+            },
+        ],
+    },
+    {
+        id: 37,
+        quote: [
+            {
+                text: "Don't ",
+                className: "text-red-500 font-bold",
+            },
+            {
+                text: "aim for ",
+            },
+            {
+                text: "perfection ",
+                className: "italic text-emerald-800",
+            },
+            {
+                text: "instead ",
+                className: "text-yellow-600",
+            },
+            {
+                text: "aim for ",
+            },
+            {
+                text: "progress",
+                className: "italic text-gray-400",
+            },
+            {
+                text: ".",
             },
         ],
     },
